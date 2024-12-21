@@ -1,14 +1,15 @@
 
-import { useEffect } from "react";
-import Loder from "../Components/Loder";
-import UseFetch from "../Hooks/UseFetch";
+// import { useEffect } from "react";
+// import Loder from "../Components/Loder";
+// import UseFetch from "../Hooks/UseFetch";
+import SearchBar from "../Components/SearchBar";
 
 export default function Home() {
 
-   const [results, loding, error, getResults] = UseFetch();
-   useEffect(() => {
-    getResults("react")
-   }, [])
+  //  const [results, loding, error, getResults] = UseFetch();
+  //  useEffect(() => {
+  //   getResults("react")
+  //  }, [])
 //    if(error){
 //   return <h2>Something went wrong</h2>
 //    }
@@ -23,7 +24,7 @@ export default function Home() {
   <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
     <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white">Blog Posts</h1>
+        <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white">Welcome to search</h1>
 
         <p className="mt-1.5 text-sm text-gray-500 dark:text-gray-400">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, recusandae.
@@ -63,12 +64,15 @@ export default function Home() {
     </div>
   </div>
 </header>
-    
-         <div className="text-center pt-4">
+<div>
+<SearchBar/>
+  
+  </div>    
+         {/* <div className="text-center pt-4">
             {loding && <Loder/>}
             {error && <h2>Something went wrong</h2>}
         {results.length > 0 && <div>{results.length}</div>}
-        </div>
+        </div> */}
     </div>
   )
 }

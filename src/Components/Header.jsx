@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 export default function Header() {
   return (
@@ -33,7 +34,7 @@ export default function Header() {
           <li><a>Item 3</a></li>
         </ul>
       </div>
-      <a className="btn btn-ghost text-xl">daisyUI</a>
+      <Link className="btn btn-ghost text-xl" to="/">Ibo</Link>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
